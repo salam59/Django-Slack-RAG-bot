@@ -17,9 +17,10 @@ def get_mongo_client():
 
 def generate_emebedding(message):
     url = "https://api.jina.ai/v1/embeddings"
+    JINA_EMBEDDING_KEY = helpers.config("JINA_EMBEDDING", default=None, cast=str)
     headers = {
         "Content-Type": "application/json",
-        "Authorization": "Bearer jina_62d94a15bb3d4e4f8653aafb84291162nfdEfus1tArfve31NjG2beCLQiS0"
+        "Authorization": f"Bearer {JINA_EMBEDDING_KEY}"
     }
     payload = {
         "model": "jina-clip-v1",
