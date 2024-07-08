@@ -1,0 +1,363 @@
+Explaining 9 types of API testing
+
+Top 5 Kafka use cases
+
+How is data sent over the internet? What does that have to do with the OSI model? How does TCP/IP fit into this?
+
+Top 5 common ways to improve API performance
+
+CI/CD Simplified Visual Guide
+
+There are over 1,000 engineering blogs. Here are my top 9 favorites:
+
+REST API Authentication Methods
+
+Linux Boot Process Illustrated
+
+How do SQL Joins Work?
+
+Netflix's Tech Stack
+
+Top Architectural Styles
+
+What does ACID mean?
+
+Oauth 2.0 Explained With Simple Terms
+
+The Evolving Landscape of API Protocols in 2023
+
+Linux boot Process Explained
+
+Explaining 8 Popular Network Protocols in 1 Diagram.
+
+Data Pipelines Overview
+
+CAP, BASE, SOLID, KISS, What do these acronyms mean?
+
+GET, POST, PUT... Common HTTP “verbs” in one figure
+
+How Do C++, Java, Python Work?
+
+Top 12 Tips for API Security
+
+Our recommended materials to crack your next tech interview
+
+How To Release A Mobile App
+
+A handy cheat sheet for the most popular cloud services (2023 edition)
+
+Best ways to test system functionality
+
+Explaining JSON Web Token (JWT) to a 10 year old Kid
+
+How do companies ship code to production?
+
+How does Docker Work? Is Docker still relevant?
+
+Explaining 8 Popular Network Protocols in 1 Diagram
+
+System Design Blueprint: The Ultimate Guide
+
+Key Concepts to Understand Database Sharding
+
+A nice cheat sheet of different monitoring infrastructure in cloud services
+
+Top 5 Software Architectural Patterns
+
+OAuth 2.0 Flows
+
+How did AWS grow from just a few services in 2006 to over 200 fully-featured services?
+
+What is GraphQL? Is it a replacement for the REST API?
+
+HTTPS, SSL Handshake, and Data Encryption Explained to Kids
+
+A nice cheat sheet of different databases in cloud services
+
+CI/CD Pipeline Explained in Simple Terms
+
+What does API gateway do?
+
+The Code Review Pyramid
+
+A picture is worth a thousand words: 9 best practices for developing microservices
+
+What are the greenest programming languages?
+
+URL, URI, URN - Do you know the differences?
+
+What branching strategies does your team use?
+
+Linux file system explained
+
+Do you believe that Google, Meta, Uber, and Airbnb put almost all of their code in one repository?
+
+What are the data structures used in daily life?
+
+Why did Amazon Prime Video monitoring move from serverless to monolithic? How can it save 90% cost?
+
+18 Most-used Linux Commands You Should Know
+
+Would it be nice if the code we wrote automatically turned into architecture diagrams?
+
+Netflix Tech Stack - Part 1 (CI/CD Pipeline)
+
+18 Key Design Patterns Every Developer Should Know
+
+How many API architecture styles do you know?
+
+Visualizing a SQL query
+
+What distinguishes MVC, MVP, MVVM, MVVM-C, and VIPER architecture patterns from each other?
+
+Almost every software engineer has used Git before, but only a handful know how it works
+
+I read something unbelievable today: Levels. fyi scaled to millions of users using Google Sheets as a backend!
+
+Logging, tracing and metrics are 3 pillars of system observability
+
+Internet Traffic Routing Policies
+
+Subjects that should be mandatory in schools
+
+Do you know all the components of a URL?
+
+What are the differences between cookies and sessions?
+
+How do DevOps, NoOps change the software development lifecycle (SDLC)?
+
+Popular interview question: What is the difference between Process and Thread?
+
+Symmetric encryption vs asymmetric encryption
+
+How does Redis persist data?
+
+IBM MQ -> RabbitMQ -> Kafka ->Pulsar, How do message queue architectures evolve?
+
+Top 4 Kubernetes Service Types in one diagram
+
+Explaining 5 unique ID generators in distributed systems
+
+How Do C++, Java, and Python Function?
+
+How will you design the Stack Overflow website?
+
+Explain the Top 6 Use Cases of Object Stores
+
+API Vs SDK!
+
+Proxy Vs reverse proxy
+
+Git Vs Github
+
+Which latency numbers should you know
+
+Eight Data Structures That Power Your Databases. Which one should we pick?
+
+How Git Commands Work
+
+How to store passwords safely in the database and how to validate a password?
+
+What is a database? What are some common types of databases?
+
+Docker vs. Kubernetes. Which one should we use?
+
+Writing Code that Runs on All Platforms
+
+HTTP Status Code You Should Know
+
+Docker 101: Streamlining App Deployment
+
+Git Merge vs. Rebase vs. Squash Commit
+
+Cloud Network Components Cheat Sheet
+
+SOAP vs REST vs GraphQL vs RPC
+
+10 Key Data Structures We Use Every Day
+
+What does a typical microservice architecture look like?
+
+My recommended materials for cracking your next technical interview
+
+Uber Tech Stack
+
+Top 5 Caching Strategies
+
+How many message queues do you know?
+
+Why is Kafka fast?
+
+How slack decides to send a notification
+
+Kubernetes Tools Ecosystem
+
+Cloud Native Landscape
+
+How does VISA work when we swipe a credit card at a merchant’s shop?
+
+What tech stack is commonly used for microservices?
+
+How do we transform a system to be Cloud Native?
+
+Explaining Sessions, Tokens, JWT, SSO, and OAuth in One Diagram
+
+Most Used Linux Commands Map
+
+What is Event Sourcing? How is it different from normal CRUD design?
+
+What is k8s (Kubernetes)?
+
+How does Git Work?
+
+How does Google Authenticator (or other types of 2-factor authenticators) work? 
+
+IaaS, PaaS, Cloud Native… How do we get here?
+
+How does ChatGPT work?
+
+Top Hidden Costs of Cloud Providers
+
+Algorithms You Should Know Before You Take System Design Interviews
+
+Understanding Database Types
+
+How does gRPC work?
+
+How does a Password Manager such as 1Password or Lastpass work? How does it keep our passwords safe?
+
+Types of Software Engineers and Their Typically Required Skills
+
+How does REST API work?
+
+Session, cookie, JWT, token, SSO, and OAuth 2.0 - what are they?
+
+Linux commands illustrated on one page!
+
+The Payments Ecosystem
+
+Algorithms You Should Know Before You Take System Design Interviews (updated list)
+
+How is data transmitted between applications?
+
+What are the common load-balancing algorithms?
+
+Cloud Native Anti Patterns
+
+Uber Tech Stack - CI/CD
+
+How Discord Stores Trillions Of Messages
+
+How to diagnose a mysterious process that’s taking too much CPU, memory, IO, etc?
+
+How does Chrome work?
+
+Differences in Event SOurcing System Design
+
+Firewall explained to Kids… and Adults
+
+Paradigm Shift: How Developer to Tester Ratio Changed From 1:1 to 100:1
+
+Why is PostgreSQL voted as the most loved database by developers?
+
+8 Key OOP Concepts Every Developer Should Know
+
+Top 6 most commonly used Server Types
+
+DevOps vs. SRE vs. Platform Engineering. Do you know the differences?
+
+5 important components of Linux
+
+How to scale a website to support millions of users?
+
+What is FedNow (instant payment)
+
+5 ways of Inter-Process Communication
+
+What is a webhook?
+
+What tools does your team use to ship code to production and ensure code quality?
+
+Stack Overflow's Architecture: A Very Interesting Case Study
+
+Are you familiar with the Java Collection Framework?
+
+Twitter 1.0 Tech Stack
+
+Linux file permission illustrated
+
+What are the differences between a data warehouse and a data lake?
+
+10 principles for building resilient payment systems (by Shopify).
+
+Kubernetes Periodic Table
+
+Evolution of the Netflix API Architecture
+
+Where do we cache data?
+
+Top 7 Most-Used Distributed System Patterns
+
+How much storage could one purchase with the price of a Tesla Model S?
+
+How to choose between RPC and RESTful?
+
+Netflix Tech Stack - Databases
+
+The 10 Algorithms That Dominate Our World
+
+What is the difference between “pull” and “push” payments?
+
+ChatGPT - timeline
+
+What is the journey of a Slack message?
+
+How does GraphQL work in the real world?
+
+Important Things About HTTP Headers You May Not Know!
+
+Think you know everything about McDonald's? What about its event-driven architecture?
+
+How ChatGPT works technically
+
+Choosing the right database is probably the most important technical decision a company will make.
+
+How do you become a full-stack developer?
+
+What’s New in GPT-4
+
+Backend Burger
+
+How do we design effective and safe APIs?
+
+Which SQL statements are most commonly used?
+
+Two common data processing models: Batch v.s. Stream Processing. What are the differences?
+
+Top 10 Architecture Characteristics / Non-Functional Requirements with Cheatsheet
+
+Are serverless databases the future? How do serverless databases differ from traditional cloud databases?
+
+Why do we need message brokers?
+
+How does Twitter recommend “For You” Timeline in 1.5 seconds?
+
+Popular interview question: what happens when you type “ssh hostname”?
+
+Discover Amazon's innovative build system - Brazil.
+
+Possible Experiment Platform Architecture
+
+YouTube handles 500+ hours of video content uploads every minute on average. How does it manage this?
+
+A beginner’s guide to CDN (Content Delivery Network)
+
+What are the API architectural styles?
+
+Cloud-native vs. Cloud computing
+
+C, C++, Java, Javascript, Typescript, Golang, Rust…
+
+The Linux Storage Stack Diagram shows the layout of the the Linux storage stack
+
+Breaking down what's going on with the Silicon Valley Bank (SVB) collapse
