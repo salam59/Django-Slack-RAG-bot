@@ -1,23 +1,10 @@
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
-import json, helpers, requests
+import json
 
-SLACK_BOT_TOKEN = helpers.config("SLACK_BOT_TOKEN", default=None, cast=str)
+from .tasks import slack_message_task
 
-
-def send_message(message, channel_id=None):
-    url = 'https://slack.com/api/chat.postMessage'
-    headers = {
-        "Content-Type": 'application/json',
-        "Authorization": f"Bearer {SLACK_BOT_TOKEN}",
-        "Accept": "application/json"
-    }
-    data = {
-        "channel": f"{channel_id}",
-        "text": message
-    }
-    return requests.post(url=url, headers=headers, json=data)
 
 @csrf_exempt
 @require_POST
@@ -32,7 +19,7 @@ def slack_events(request):
     valid_data_types = ["url_verification", "event_callback"]
     if data_type not in valid_data_types:
         return HttpResponse("Not Allowed", status=403)
-    
+
     if data_type == "url_verification":
         challenge = json_data.get("challenge", None)
         if challenge:
@@ -41,10 +28,25 @@ def slack_events(request):
     elif data_type == "event_callback":
         event = json_data.get("event", {})
         channel_id = event.get("channel", None)
-        message = event.get("text", None)
+        user_id = event.get("user", None)
+        try:
+            message = event.get("blocks", [])[
+                0]['elements'][0]['elements'][1]['text']
+        except:
+            message = event.get("text", None)
+        msg_ts = event.get("ts", None)
+        thread_ts = event.get("thread_ts", msg_ts)
         if channel_id:
-            response = send_message(message=message, channel_id=channel_id)
-            return HttpResponse(response.text, status=response.status_code)
+            # response = slacky.send_message(message=message, channel_id=channel_id, user_id=user_id, thread_ts=thread_ts)
+            # response = slack_message_task.delay(
+            #     message, channel_id, user_id, thread_ts)
+          
+            slack_message_task.apply_async(kwargs={
+                "message": f"{message}",
+                "channel_id": channel_id,
+                "user_id": user_id,
+                "thread_ts": thread_ts}, countdown=0)
+            return HttpResponse("Success", status=200)
         return HttpResponse("Not Allowed", status=403)
-    
+
     return HttpResponse("OK")
