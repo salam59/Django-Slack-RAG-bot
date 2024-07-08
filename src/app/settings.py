@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_celery_beat',
+    'django_celery_results',
     'bot',
 ]
 
@@ -123,3 +125,17 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# CELERY STUFF
+
+CELERY_RESULTS_BACKEND = helpers.config('CELERY_RESULT_BACKEND', default=None, cast=str)
+
+CELERY_BROKER_URL = helpers.config("CELERY_BROKER_URL", default=None, cast=str)
+
+CELERY_BEAT_SCHEDULER = "django_celery_beat.schedulers:DatabaseScheduler"
+
+CELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True
+
+# CElERY_REDIS_BACKEND_USE_SSL = True
+
+# CELERY_BROKER_USE_SSL = True
