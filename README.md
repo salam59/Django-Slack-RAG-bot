@@ -2,7 +2,7 @@
 
 # Sytstem Design [Slack] Bot RAG
 
-This project is a Slack bot integrated with a Retrieval-Augmented Generation (RAG) system designed to assist users by providing explanations and attaching relevant images from a system design PDF [Alex Xu].
+This project is a Slack bot integrated with a Retrieval-Augmented Generation (RAG) with knowledge of system design to assist users by providing explanations and attaching relevant images from a system design PDF [Alex Xu].
 
 
 
@@ -125,3 +125,9 @@ For Mongo Vector Index Setup:
     https://github.com/DataTalksClub/llm-zoomcamp
 ```
 
+## Challenges Faced:
+  - Data Processing from PDF [Alex Xu System Design]
+  - Uploading an Image to Slack
+    - we need to use 2 different APIs to upload a file. 
+    - Refer to the references I have mentioned
+    
