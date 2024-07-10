@@ -5,7 +5,6 @@ import json
 
 from .tasks import slack_message_task
 
-
 @csrf_exempt
 @require_POST
 def slack_events(request):
@@ -45,8 +44,10 @@ def slack_events(request):
                 "message": f"{message}",
                 "channel_id": channel_id,
                 "user_id": user_id,
-                "thread_ts": thread_ts}, countdown=0)
+                "thread_ts": thread_ts,
+                "image_url": None}, countdown=0)
             return HttpResponse("Success", status=200)
         return HttpResponse("Not Allowed", status=403)
 
     return HttpResponse("OK")
+
