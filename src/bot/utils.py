@@ -39,12 +39,12 @@ def generate_emebedding(message):
 def get_mongo_data(message):
     mongo_client = get_mongo_client()
     db = mongo_client["sys_design_data"]  
-    collection = db["Topics"] 
+    collection = db["topics"] 
 
     pipeline = [
         {
             '$vectorSearch': {
-            'index': 'slac_rag_bot', 
+            'index': 'rag_bot', 
             'path': 'content_embedding', 
             'queryVector': generate_emebedding(message),
             'numCandidates': 23, 
@@ -53,7 +53,8 @@ def get_mongo_data(message):
         }, {
             '$project': {
                 'Topic': 1, 
-                'content': 1, 
+                'content': 1,
+                'image_url': 1
             }
         }
     ]
@@ -86,22 +87,23 @@ def build_context(documents):
     # breakpoint()
     documents = list(documents)
     print(len(documents))
+    image_url = documents[0]["image_url"]
+    topic = documents[0]["Topic"]
     for doc in documents:
-        print("doc")
         doc_str = context_template.format(Topic=doc["Topic"], content=doc["content"])
         context_result += ("\n\n" + doc_str)
     
-    return context_result.strip()
+    return context_result.strip(), image_url, topic
 
 
 def build_prompt(user_question):
     documents = get_mongo_data(user_question)
-    context = build_context(documents=documents)
+    context, image_url, topic = build_context(documents=documents)
     prompt = prompt_template.format(
         question=user_question,
         context=context
     )
-    return prompt
+    return prompt, image_url, topic
 
 
 def query_rag(message, raw=False):
@@ -110,15 +112,16 @@ def query_rag(message, raw=False):
     #     model='phi3',
     #     messages=[{"role": "user", "content": message}],
     # )
-    response = run_mistral(message)
+    response, image_url = run_mistral(message)
     if raw:
-        return response
-    return response
+        return response, image_url
+    return response, image_url
 
 def run_mistral(user_message, model="mistral-medium-latest"):
+    image_url = ""
     try:
         client = MistralClient(api_key=helpers.config("MISTRAL_API_KEY", default=None, cast=str))
-        prompt = build_prompt(user_message)
+        prompt, image_url, topic = build_prompt(user_message)
         messages = [
             ChatMessage(role="user", content=prompt)
         ]
@@ -126,8 +129,8 @@ def run_mistral(user_message, model="mistral-medium-latest"):
             model=model,
             messages=messages
         )
-        return chat_response.choices[0].message.content
+        return f"{topic}\n\n{chat_response.choices[0].message.content}", image_url
     except Exception as e:
         print(f"Error running mistral: {e}")
-        return ""
+        return "", image_url
 
